@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: gemini-fastapi
+    env: python
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://karnakar5511:p8Vy0UVjvy7pciOH@cluster0.xr3ih5b.mongodb.net/gemini?retryWrites=true&w=majority
